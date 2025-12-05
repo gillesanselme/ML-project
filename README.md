@@ -1,1 +1,1 @@
-Repro pour des projets de ML orienté Chimiométrie
+Repro pour des projets de ML orientés Chimiométrie
