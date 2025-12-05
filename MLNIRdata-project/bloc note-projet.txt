@@ -1,0 +1,17 @@
+Projet de machine Learning: 208 spectres Proches infra rouge NIR pour la densité d'un mélange d'hydrocarbures
+Description du projet:
+la méthode PLS est celle qui a toujours été utilisé en chimiométrie pour la prédiction de mélanges chimiques. la publication accompagnant les data est destiné à des analyses supplémentaires et à des références en chimiométrie.
+les 208 spectres correspondent au nombre d'échantillons d'hydrocarbures.
+L'axe x est un vecteur 1D discret de nombres d'onde,
+échantillonné uniformément, dont les unités sont données en cm−1 et représentées à l'envers, voir figure 1-haut. En spectroscopie infrarouge,
+un faible nombre d'onde correspond à des liaisons à faible énergie, tandis que des nombres d'onde plus élevés correspondent à des liaisons à haute énergie. Pour les mêmes
+échantillons d'hydrocarbures, une propriété physico-chimique globale appelée densité y a été acquise. Un défi classique en chimiométrie
+consiste à déterminer s'il est possible de prédire la densité à partir des spectres à l'aide de modèles statistiques, et si l'on est capable d'identifier les plages de nombres d'onde
+qui contribuent le plus à la propriété prédite. Pour MLNIRdata, la propriété de densité est un scalaire, qui a été
+normalisé à l'intervalle (sans unité) 0 à 1. Cette normalisation ne devrait pas affecter les performances de prédiction.
+Les signaux de spectroscopie infrarouge sont souvent prétraités afin de réduire les perturbations linéaires ou les artefacts non linéaires. Cette étape
+permet également souvent d'améliorer la diversité entre des spectres similaires. Un prétraitement courant consiste à calculer la dérivée première ou
+seconde des données. 
+Afin d'éviter l'amplification du bruit, cette opération est parfois associée à un lissage. L'une de ces méthodes est communément appelée filtrage de Savitzky-Golay (S.-G.) [SG64]. MLNIRdata contient une dérivée numérique des signaux originaux,
+ caractérisée par un ordre de 1 (dérivée), une approximation polynomiale de degré 2 et une longueur de 15. Les signaux de gradient résultants ont été tronqués aux deux extrémités, afin d'obtenir un autre ensemble de 2594 échantillons de signaux discrets. Ils sont représentés dans la figure 1-bas, avec le même schéma de couleurs que pour la propriété de densité.
+
